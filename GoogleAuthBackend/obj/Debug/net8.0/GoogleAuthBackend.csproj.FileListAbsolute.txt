@@ -1,5 +1,4 @@
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/appsettings.Development.json
-/Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/appsettings.json
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/GoogleAuthBackend
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/GoogleAuthBackend.deps.json
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/GoogleAuthBackend.runtimeconfig.json
@@ -130,3 +129,4 @@
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/DotNetEnv.dll
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/Sprache.dll
+/Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/obj/Debug/net8.0/GoogleAuthBackend.sourcelink.json
