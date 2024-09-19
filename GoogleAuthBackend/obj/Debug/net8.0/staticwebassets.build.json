@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZBfhzK6vbMzSf9icbTbZ/m27V8CXfh+TAPB2/d+6IKA=",
+  "Source": "GoogleAuthBackend",
+  "BasePath": "_content/GoogleAuthBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
