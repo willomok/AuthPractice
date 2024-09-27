@@ -130,3 +130,4 @@
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/DotNetEnv.dll
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/Sprache.dll
 /Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/obj/Debug/net8.0/GoogleAuthBackend.sourcelink.json
+/Users/willomokeowa/Workspace/backend playground/AuthPractice/GoogleAuthBackend/bin/Debug/net8.0/appsettings.json

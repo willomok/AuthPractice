@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom'; // Required for accessing query params
+import { useLocation } from 'react-router-dom'; 
 
 const ProfilePage: React.FC = () => {
   const location = useLocation();
   const [profile, setProfile] = useState<{ name: string; email: string } | null>(null);
 
   useEffect(() => {
-    // Extract email and name from query parameters
+
     const queryParams = new URLSearchParams(location.search);
     const name = queryParams.get('name');
     const email = queryParams.get('email');

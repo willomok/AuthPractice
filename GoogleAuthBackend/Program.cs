@@ -7,23 +7,21 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Load environment variables from the .env file
 Env.Load();
 
-// Ensure configuration is loaded (appsettings.json and environment variables)
 builder.Configuration
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-    .AddEnvironmentVariables();  // This allows environment variables to override configuration
+    .AddEnvironmentVariables();  
 
-// Add services to the container
+
 builder.Services.AddControllers();
 
 // Add DbContext with MySQL configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 32)) // Specify the MySQL version
+        new MySqlServerVersion(new Version(8, 0, 32)) 
     ));
 
 // Retrieve the ClientId and ClientSecret from environment variables or appsettings.json
@@ -56,31 +54,30 @@ builder.Services.AddAuthentication(options =>
     googleOptions.ClientId = clientId;
     googleOptions.ClientSecret = clientSecret;
     googleOptions.SaveTokens = true;
-    googleOptions.CallbackPath = "/signin-google";  // Ensure your redirect URI matches this in the Google Developer Console
+    googleOptions.CallbackPath = "/signin-google";  // redirect URI matches this in the Google Developer Console
 });
 
-// Add Authorization
+
 builder.Services.AddAuthorization();
 
-// Add CORS policy to allow frontend communication
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // Your frontend URL
+        policy.WithOrigins("http://localhost:5173") 
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials(); // Allow credentials for login sessions (like cookies)
     });
 });
 
-// Add Swagger/OpenAPI support (optional, for API documentation)
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Enable Swagger for API documentation (Development only)
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -91,17 +88,15 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-// Enable CORS
 app.UseCors("AllowAllOrigins");
 
-// Enable HTTPS redirection if needed
+
 app.UseHttpsRedirection();
 
-// Add Authentication & Authorization middleware
-app.UseAuthentication(); // Ensure this comes before Authorization
+app.UseAuthentication(); 
 app.UseAuthorization();
 
-// Map Controllers to routes
+
 app.MapControllers();
 
 app.Run();
